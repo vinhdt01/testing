@@ -8,7 +8,7 @@
     "SECRET": "Random 32 Hash Key",
     "GOOGLE_CLIENT_ID": "Google Client Key",
     "GOOGLE_CLIENT_SECRET": "Google Client Secret",
-    "REVALIDATE_DURATION": 120
+    "REVALIDATE_DURATION": "120"
   },
   "build": {
     "env": {
