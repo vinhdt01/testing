@@ -120,6 +120,7 @@ import "react-toastify/dist/ReactToastify.css";
 import BannerCard from "@components/common/banner-card";
 import {
   promotionBanner,
+  classicDemoBannerTwo as bannerTwo,
   classicDemoBannerThree as bannerThree
 } from "@data/static/banners";
 import HeroSlider from "@containers/hero-slider";
@@ -131,7 +132,6 @@ import {
 import Slider from '@components/slide/slider'
 import BannerSliderBlock from "@containers/banner-slider-block";
 import CategoryBlock from "@containers/category-block";
-import ProductsBlock from "@containers/products-block";
 
 const CustomApp: any = ({ Component, pageProps }: AppPropsWithLayout) => { 
 
@@ -153,8 +153,6 @@ return (
           className="mb-11 md:mb-12 lg:mb-14 2xl:mb-16"
           effectActive={true}
         />
-  <ProductsBlock sectionHeading="text-shop-by-category" />
-
   <BannerSliderBlock data={promotionBanner} />      
       </>
 )

@@ -187,11 +187,16 @@
 import Card from "@components/common/card";
 import SectionHeader from "@components/common/section-header";
 import Carousel from "@components/ui/carousel/carousel";
+import CardLoader from "@components/ui/loaders/card-loader";
 import CardRoundedLoader from "@components/ui/loaders/card-rounded-loader";
 import CardIconLoader from "@components/ui/loaders/card-icon-loader";
-
+import { useCategoriesQuery } from "@framework/category/categories.query";
+import { ROUTES } from "@lib/routes";
+import Alert from "@components/ui/alert";
 import { SwiperSlide } from "swiper/react";
-
+import isEmpty from "lodash/isEmpty";
+import NotFoundItem from "@components/404/not-found-item";
+import { useTranslation } from "next-i18next";
 import React from "react";
 import { getCategoryTypeImage } from "@lib/get-category-type-image";
 
@@ -285,7 +290,7 @@ const modernBreakpoints = {
 };
 
 const CategoryBlock: React.FC<CategoriesProps> = ({
-	className = "m-auto lg:pb-1 xl:pb-0 max-w-[1200px] ",
+	className = "mb-10 md:mb-11 lg:mb-12 xl:mb-14 lg:pb-1 xl:pb-0 w-[100%]",
 	sectionHeading,
 	variant = "circle",
 	effectPosition = "imageOnly",
@@ -306,7 +311,7 @@ const CategoryBlock: React.FC<CategoriesProps> = ({
 		<div className={className}>
 			<SectionHeader sectionHeading={sectionHeading} />
 			
-			<Carousel
+				<Carousel
 					breakpoints={sliderBreakpoints}
 					buttonClassName="-mt-8 md:-mt-10"
 				>
@@ -327,7 +332,7 @@ const CategoryBlock: React.FC<CategoriesProps> = ({
 								return (
 									<SwiperSlide key={`card-circle-${idx}`}>
 										{/* <CardLoader uniqueKey={`card-circle-${idx}`} /> */}
-										<Card
+																			<Card
 										item={'dfdsf'}
 										href={`543543453`}
 										variant={variant}

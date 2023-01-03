@@ -155,7 +155,7 @@ const Header:React.FC= () => {
 		  <div className="xl:hidden flex justify-between items-center px-1  h-[50px]">
 			<img className="w-[71px] h-[30.8px]" src="https://cdn.pnj.io/images/logo/pnj.com.vn.png" />
             <div className=" relative mx-8">
-			<input className="w-[100%]  h-[28px] flex-1  rounded-2xl pl-2 pr-7 outline-none border-[1px] border-slate-100 bg-[#ededed] placeholder:text-[13px]" type="text" placeholder="Tìm kiếm nhanh"/>
+			<input className="w-[100%] h-[28px] flex-1  rounded-2xl pl-2 pr-7 outline-none border-[1px] border-slate-100 bg-[#ededed] placeholder:text-[13px]" type="text" placeholder="Tìm kiếm nhanh"/>
 			<img
               className=" absolute top-[6px] right-3 bg-[#ededed]"
               src="https://cdn.pnj.io/images/image-update/layout/mobile/find-icon.svg"

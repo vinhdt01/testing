@@ -234,9 +234,7 @@
  import Text from "@components/ui/text";
  import { FaLink } from "@react-icons/all-files/fa/FaLink";
  import { LinkProps } from "next/link";
- import { useTranslation } from "next-i18next";
  import React from "react";
- import { filterBrandImages } from "@lib/filter-brands";
  import { Attachment } from "@framework/types";
 
   interface Props {
@@ -262,26 +260,23 @@
 // const Card:React.FC = () => {
 	return (
 		<Link
-				href='/#'
+				href='/fdgfdg'
 					
 			>
 				 <div
 					className={`relative inline-flex  mb-3.5 md:mb-4 lg:mb-5 xl:mb-6`}
 				>
-					<div className="">
+					<div className="flex">
 						<Image
 							src='https://vcdn1-giaitri.vnecdn.net/2022/10/24/-8754-1666626354.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=ulXyjj4k2WsNOBaHaCMMRQ'
 							alt='test'
-							width='130'
-							height='130'
+							width='100'
+							height='100'
 							quality={100}
-							className="rounded-full	sm:w-[130px] sm:h-[130px] w-[100px] h-[100px]"
 							// className={`${
 							// 	(["rounded", "modern", "elegant"].includes(variant) ? "rounded-md" : "") || (variant === "circle" && "rounded-full")
 							// } ${["elegant", "modern"].includes(variant) ? "object-contain" : "object-cover bg-gray-300"}`}
 						/>
-						<div className="text-center">Nhẫn</div>
-
 					</div>
 					{(effectActive === true && effectPosition === "imageOnly") && (
 						<>
@@ -289,14 +284,14 @@
 								className="absolute top-0 left-0 bg-black w-full h-full opacity-0 transition-opacity duration-300 group-hover:opacity-30"
 								
 							/>
-							{/* <div className="absolute top-0 left-0 h-full w-full flex items-center justify-center">
+							<div className="absolute top-0 left-0 h-full w-full flex items-center justify-center">
 								<FaLink className="text-white text-base sm:text-xl lg:text-2xl xl:text-3xl transform opacity-0 scale-0 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-100" />
-							</div> */}
+							</div>
 						</>
 					)}
 				</div>
 				
-					{/* <Text variant="heading" className="text-heading text-sm md:text-base xl:text-lg font-semibold capitalize absolute text-center bottom-4 sm:bottom-5 md:bottom-6 xl:bottom-8 inset-x-0 z-10">
+					<Text variant="heading" className="text-heading text-sm md:text-base xl:text-lg font-semibold capitalize absolute text-center bottom-4 sm:bottom-5 md:bottom-6 xl:bottom-8 inset-x-0 z-10">
 					 Vinh {Math.random()*2}
 					</Text>
 				
@@ -310,7 +305,7 @@
 						/>
 						<div className="absolute top-0 left-0 h-full w-full flex items-center justify-center">
 							<FaLink className="text-white text-base sm:text-xl lg:text-2xl xl:text-3xl transform opacity-0 scale-0 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-100" />
-						</div> */}
+						</div>
 				
 			
 			</Link>

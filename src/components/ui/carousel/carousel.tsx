@@ -1,10 +1,6 @@
 import React, { useRef } from "react";
 import { Swiper } from "swiper/react";
 import { useRouter } from "next/router";
-// import { useSwiper } from 'swiper/';
-import { useSwiper} from "swiper/react"
-
-
 import SwiperCore, { Navigation, Pagination, Autoplay, Scrollbar } from "swiper";
 import { IoIosArrowBack } from "@react-icons/all-files/io/IoIosArrowBack";
 import { IoIosArrowForward } from "@react-icons/all-files/io/IoIosArrowForward";
@@ -27,8 +23,6 @@ type CarouselPropsType = {
 	loop?: boolean;
 	scrollbar?: {} | any;
 	buttonPosition?: "inside" | "outside"
-	spaceBetween?: any
-	slidesPerView?: any
 };
 
 const Carousel: React.FunctionComponent<CarouselPropsType> = ({
@@ -56,8 +50,6 @@ const Carousel: React.FunctionComponent<CarouselPropsType> = ({
 			}`}
 		>
 			<Swiper
-			   spaceBetween={10}
-			   slidesPerView={1}
 				loop={loop ?? true}
 				autoplay={autoplay}
 				breakpoints={breakpoints}
@@ -82,7 +74,7 @@ const Carousel: React.FunctionComponent<CarouselPropsType> = ({
 					aria-label="prev-button"
 					className={`${buttonClassName} ${
 						buttonSize === "default"
-							? "w-7 h-7 md:w-7 md:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10 3xl:w-12 3xl:h-12 text-sm md:text-base lg:text-xl 3xl:text-2xl left-0"
+							? "w-7 h-7 md:w-7 md:h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10 3xl:w-12 3xl:h-12 text-sm md:text-base lg:text-xl 3xl:text-2xl"
 							: "w-7 h-7 md:w-7 md:h-7 lg:w-8 lg:h-8 text-sm md:text-base lg:text-lg"
 					} text-black flex items-center justify-center rounded-full text-gray-0 bg-white absolute transition duration-250 hover:bg-gray-900 hover:text-white focus:outline-none ${buttonPosition === "inside" ? "ltr:left-16 rtl:right-16" : "ltr:left-5 rtl:right-5" } transform ${
 						dir === "rtl"
@@ -97,9 +89,9 @@ const Carousel: React.FunctionComponent<CarouselPropsType> = ({
 					aria-label="next-button"
 					className={`${buttonClassName} ${
 						buttonSize === "default"
-							? "w-7 h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10 3xl:w-12 3xl:h-12 text-sm md:text-base lg:text-xl 3xl:text-2xl right-4"
+							? "w-7 h-7 lg:w-9 lg:h-9 xl:w-10 xl:h-10 3xl:w-12 3xl:h-12 text-sm md:text-base lg:text-xl 3xl:text-2xl"
 							: "w-7 h-7 lg:w-8 lg:h-8 text-sm md:text-base lg:text-lg"
-					} text-black flex items-center justify-center rounded-full bg-white absolute transition duration-250 hover:bg-gray-900 hover:text-white focus:outline-none ${buttonPosition === "inside" ? "ltr:right-16 rtl:left-16" : "ltr:right-0"} transform ${
+					} text-black flex items-center justify-center rounded-full bg-white absolute transition duration-250 hover:bg-gray-900 hover:text-white focus:outline-none ${buttonPosition === "inside" ? "ltr:right-16 rtl:left-16" : "ltr:right-5 rtl:left-5"} transform ${
 						dir === "rtl"
 							? "rotate-180 shadow-navigationReverse -translate-x-1/2"
 							: "shadow-navigation translate-x-1/2"
