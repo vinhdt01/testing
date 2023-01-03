@@ -24,8 +24,8 @@ const SiteLayout: React.FC = ({ children }) => {
 	);
 };
 
-// export const getLayout = (page: React.ReactElement) => (
-//   <SiteLayout>{page}</SiteLayout>
-// )
+ export const getLayout = (page: React.ReactElement) => (
+   <SiteLayout>{page}</SiteLayout>
+ )
 
 export default SiteLayout;
